@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison de' Valo - Inspirasi Outfit Harian</title>
+
+  <!-- Bootstrap (hanya dipakai untuk navbar) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- CSS eksternal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (Bootstrap) ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-ootd" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="#beranda">Maison de' Valo</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuNavbar" aria-controls="menuNavbar"
+        aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#koleksi">Koleksi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+        <button id="tema" class="tombol-tema" type="button">🌙 Mode Gelap</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="beranda" class="hero">
+    <div class="hero-videotron" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="videotron-ootd.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-isi">
+      <p id="salam" class="salam">Selamat Datang</p>
+      <h1>Tampil Percaya Diri dengan <span class="sorot">Maison de' Valo</span></h1>
+      <p>Inspirasi outfit harian, mix and match praktis, dan koleksi pilihan untuk gayamu sendiri.</p>
+      <a href="#koleksi" class="tombol tombol-utama">Lihat Koleksi</a>
+      <a href="#kontak" class="tombol tombol-garis">Hubungi Kami</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== TENTANG ===== -->
+    <section id="tentang" class="bagian">
+      <div class="wadah">
+        <h2>Kenapa Maison de' Valo?</h2>
+        <p class="teks-tengah">Tiga hal yang bikin gayamu makin percaya diri.</p>
+
+        <div class="grid-kartu">
+          <article class="kartu">
+            <div class="ikon">🧥</div>
+            <h3>Mix &amp; Match</h3>
+            <p>Panduan padu padan item basic menjadi puluhan look berbeda untuk setiap suasana.</p>
+          </article>
+          <article class="kartu">
+            <div class="ikon">💸</div>
+            <h3>Ramah Kantong</h3>
+            <p>Koleksi pilihan dengan harga bersahabat tanpa mengorbankan kualitas bahan.</p>
+          </article>
+          <article class="kartu">
+            <div class="ikon">📸</div>
+            <h3>Inspirasi Harian</h3>
+            <p>Ide OOTD baru setiap hari untuk kuliah, kerja, atau sekadar nongkrong.</p>
+          </article>
+        </div>
+
+        <h3 class="judul-kecil">Gaya Favorit</h3>
+        <ul id="daftarGaya" class="daftar-gaya"></ul>
+      </div>
+    </section>
+
+    <!-- ===== KOLEKSI ===== -->
+    <section id="koleksi" class="bagian bagian-gelap">
+      <div class="wadah">
+        <h2>Koleksi Pilihan</h2>
+        <p>Cari item, klik barisnya, lalu atur jumlah di keranjang bawah tabel.</p>
+
+        <input type="text" id="cari" class="kotak-cari" placeholder="Cari item..." aria-label="Cari item">
+
+        <div class="bungkus-tabel">
+          <table class="tabel-koleksi">
+            <thead>
+              <tr>
+                <th>Nama Item</th>
+                <th>Keterangan</th>
+                <th>Harga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Collar Jacket</td>
+                <td>Menghangatkan, cocok untuk look santai saat hujan</td>
+                <td>Rp 278.000</td>
+              </tr>
+              <tr>
+                <td>Kemeja Linen Oversize</td>
+                <td>Adem, cocok untuk look santai</td>
+                <td>Rp 189.000</td>
+              </tr>
+              <tr>
+                <td>Kaos Putih Fitted tee</td>
+                <td>Adem, cocok untuk look santai</td>
+                <td>Rp 150.000</td>
+              </tr>
+              <tr>
+                <td>Wide-leg trousers</td>
+                <td>Jatuh dan nyaman dipakai seharian</td>
+                <td>Rp 159.000</td>
+              </tr>
+              <tr>
+                <td>Ikat Pinggang</td>
+                <td>cocok untuk memperkuat look casual</td>
+                <td>Rp 95.000</td>
+              </tr>
+              <tr>
+                <td>Sepatu kulit</td>
+                <td>Pilihan rapi untuk kerja dan acara</td>
+                <td>Rp 389.000</td>
+              </tr>
+              <tr>
+                <td>Sweater Rajut Lengan Panjang</td>
+                <td>Cocok untuk cuaca dingin</td>
+                <td>Rp 289.000</td>
+              </tr>
+              <tr>
+                <td>Celana Panjang Denim</td>
+                <td>Serasi dengan hampir semua outfit</td>
+                <td>Rp 198.000</td>
+              </tr>
+              <tr>
+                <td>Hoodie Oversize</td>
+                <td>Hangat dan nyaman untuk cuaca dingin</td>
+                <td>Rp 289.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pesanan">
+          <label for="pilihItem">Pilih item:</label>
+          <select id="pilihItem">
+            <option value="Collar Jacket">Collar Jacket</option>
+            <option value="Kemeja Linen Oversize">Kemeja Linen Oversize</option>
+            <option value="Kaos Putih Fitted tee">Kaos Putih Fitted tee</option>
+            <option value="Wide-leg trousers">Wide-leg trousers</option>
+            <option value="Ikat Pinggang">Ikat Pinggang</option>
+            <option value="Sepatu kulit">Sepatu kulit</option>
+            <option value="Sweater Rajut Lengan Panjang">Sweater Rajut Lengan Panjang</option>
+            <option value="Celana Panjang Denim">Celana Panjang Denim</option>
+            <option value="Hoodie Oversize">Hoodie Oversize</option>
+          </select>
+
+          <p>Jumlah di keranjang: <span id="angka">0</span> pcs</p>
+          <button id="kurangi" class="tombol-kecil" type="button" aria-label="Kurangi jumlah">-</button>
+          <button id="tambah" class="tombol-kecil" type="button" aria-label="Tambah jumlah">+</button>
+          <p id="infoPesanan">Keranjang masih kosong.</p>
+          <p>Total bayar: <strong id="total">Rp 0</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERI ===== -->
+    <section id="galeri" class="bagian">
+      <div class="wadah">
+        <h2> Galeri Maison de' Valo</h2>
+        <p>Klik gambar kecil untuk melihat gambar besar.</p>
+
+        <img id="utama" src="images/ootd-smart-casual.webp" alt="Outfit smart casual dengan jaket navy dan celana hitam" decoding="async">
+        <p id="keterangan" class="keterangan">Outfit Casual</p>
+
+        <div class="thumbs">
+          <img class="thumb aktif" src="images/ootd-smart-casual.webp" alt="Outfit Casual" width="736" height="1308" decoding="async" role="button" aria-label="Tampilkan outfit smart casual navy" tabindex="0">
+          <img class="thumb" src="images/ootd-knitwear.webp" alt="Outfit Minimalis" width="736" height="1104" loading="lazy" decoding="async" role="button" aria-label="Tampilkan outfit sweater rajut netral" tabindex="0">
+          <img class="thumb" src="images/ootd-brown-layer.webp" alt="Outfit Vintage" width="736" height="1308" loading="lazy" decoding="async" role="button" aria-label="Tampilkan outfit layering jaket cokelat" tabindex="0">
+          <img class="thumb" src="images/ootd-formal-vest.webp" alt="Outfit Formal" width="736" height="1104" loading="lazy" decoding="async" role="button" aria-label="Tampilkan outfit rompi formal" tabindex="0">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="bagian bagian-gelap">
+      <div class="wadah wadah-sempit">
+        <h2>Pertanyaan Umum</h2>
+        <p>Klik pertanyaan untuk membuka jawabannya.</p>
+
+        <button class="pertanyaan" type="button">Bagaimana cara memilih ukuran?</button>
+        <div class="jawaban"><p>Setiap produk punya tabel ukuran. Jika ragu, hubungi kami untuk dibantu.</p></div>
+
+        <button class="pertanyaan" type="button">Apakah barang bisa dikembalikan?</button>
+        <div class="jawaban"><p>Bisa, maksimal 7 hari setelah barang diterima dan label masih terpasang.</p></div>
+
+        <button class="pertanyaan" type="button">Berapa lama pengiriman?</button>
+        <div class="jawaban"><p>Pulau Jawa 2 sampai 4 hari kerja, luar Jawa 4 sampai 7 hari kerja.</p></div>
+
+        <button class="pertanyaan" type="button">Apakah ada layanan konsultasi gaya?</button>
+        <div class="jawaban"><p>Ada. Kirim fotomu lewat formulir kontak dan kami bantu pilihkan outfit.</p></div>
+
+        <button class="pertanyaan" type="button">Apakah bisa pesan dalam jumlah besar?</button>
+        <div class="jawaban"><p>Bisa. Tersedia harga reseller untuk pembelian minimal 10 pcs.</p></div>
+
+        <button class="pertanyaan" type="button">Pembayaran apa saja yang diterima?</button>
+        <div class="jawaban"><p>Kami menerima QRIS, transfer bank, dan dompet digital.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK / FORM ===== -->
+    <section id="kontak" class="bagian">
+      <div class="wadah">
+        <h2>Hubungi Kami</h2>
+        <p>Isi formulir di bawah, kami balas secepatnya.</p>
+
+        <ul class="info-kontak">
+          <li>📍 Jl. Braga No. 21, Semarang</li>
+          <li>🕙 Senin - Sabtu, 10.00 - 20.00 WIB</li>
+          <li>📷 @maisondevalo.id</li>
+          <li>✉️ halo@maisondevalo.id</li>
+        </ul>
+
+        <form id="formKontak" class="form-kontak" novalidate>
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com">
+
+          <label for="jenisGaya">Jenis gaya favorit </label>
+          <select id="jenisGaya" name="jenisGaya">
+            <option value="">Pilih gaya favorit</option>
+            <option value="Casual">Casual</option>
+            <option value="Streetwear">Streetwear</option>
+            <option value="Minimalis">Minimalis</option>
+            <option value="Korean Style">Korean Style</option>
+            <option value="Vintage">Vintage</option>
+            <option value="Formal">Formal</option>
+          </select>
+
+          <label for="keperluan">Keperluan </label>
+          <select id="keperluan" name="keperluan">
+            <option value="">Pilih keperluan</option>
+            <option value="Tanya produk">Tanya produk</option>
+            <option value="Konsultasi gaya">Konsultasi gaya</option>
+            <option value="Pesanan">Pesanan</option>
+            <option value="Kerja sama">Kerja sama</option>
+          </select>
+
+          <label for="isi">Pesan </label>
+          <textarea id="isi" name="isi" rows="4" maxlength="200" placeholder="Tulis pesanmu di sini"></textarea>
+          <small id="hitung">0 / 200 karakter</small>
+
+          <button type="submit" class="tombol tombol-utama">Kirim Pesan</button>
+          <p id="pesanForm" class="pesan-form" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="tahun">2026</span> Maison de' Valo. Dibuat untuk tugas Pemrograman Web.</p>
+    <p>Nama: Romirza Putra Aditya | NIM: A12.2025.07323</p>
+  </footer>
+
+  <!-- JavaScript Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
