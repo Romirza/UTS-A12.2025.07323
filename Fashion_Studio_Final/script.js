@@ -23,6 +23,19 @@ const jamSekarang = new Date().getHours();
 
 salam.textContent = `${sapa(jamSekarang)}, Fashionista!`;
 
+// ----- Animasi logo brand saat diklik -----
+const logoBrand = document.querySelector('.navbar-brand');
+
+logoBrand.addEventListener('click', () => {
+  logoBrand.classList.remove('logo-animasi');
+  void logoBrand.offsetWidth;
+  logoBrand.classList.add('logo-animasi');
+});
+
+logoBrand.addEventListener('animationend', () => {
+  logoBrand.classList.remove('logo-animasi');
+});
+
 // ----- Fitur 2: dark/light mode -----
 const tombolTema = document.querySelector('#tema');
 
